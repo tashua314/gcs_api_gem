@@ -1,0 +1,40 @@
+Layout/EmptyLineAfterMagicComment:
+  Exclude:
+    - 'gcs_api_gem.gemspec'
+
+Layout/ExtraSpacing:
+  Exclude:
+    - 'gcs_api_gem.gemspec'
+
+Layout/SpaceAroundOperators:
+  Exclude:
+    - 'gcs_api_gem.gemspec'
+
+Layout/SpaceInsideBlockBraces:
+  Exclude:
+    - 'Gemfile'
+
+Metrics/LineLength:
+  Max: 96
+
+# Offense count: 1
+# Cop supports --auto-correct.
+Style/MutableConstant:
+  Exclude:
+    - 'lib/gcs_api_gem/version.rb'
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'gcs_api_gem.gemspec'
+
+Style/StringLiterals:
+  Exclude:
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'bin/console'
+    - 'gcs_api_gem.gemspec'
+    - 'spec/spec_helper.rb'
+
+Style/UnneededPercentQ:
+  Exclude:
+    - 'gcs_api_gem.gemspec'
