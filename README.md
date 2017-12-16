@@ -45,6 +45,7 @@ If you want to know how to get GOOGLE_CUSTOME_SEARCH_ENGINE_ID and GOOGLE_API_KE
 Or see [here](http://ryutamaki.hatenablog.com/entry/2014/01/18/171640).
 
 ## Usage
+### In a program
 
 Write in your program as below:
 
@@ -54,7 +55,7 @@ GcsApiGem::SearchApu.rondom_image(<keyword>)
 
 Then you get a random image searched by keyword.
 
-## Example
+#### Example
 
 ```
 > GcsApiGem::SearchApi.random_image('cat')
@@ -65,7 +66,7 @@ Then you get a random image searched by keyword.
    }
 ```
 
-## Response
+#### Response
 
 Response of GcsApiGem::SearchApi.random_image is as below:
 
@@ -74,6 +75,12 @@ Response of GcsApiGem::SearchApi.random_image is as below:
 | title         | The title of the web site that got the image. |
 | image         | The URL of the got image.                     |
 | search_result | Number of images hit in search.               |
+
+### In a command line
+
+Write in a command line as below:
+
+    $ gcs_api_gem.random_image -r cat
 
 ## Contributing
 
