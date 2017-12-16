@@ -73,13 +73,13 @@ Then you get a random image searched by keyword.
 
 Response of GcsApiGem::SearchApi.random_image is as below:
 
-| key           | detail                                        |
-| ------------- | --------------------------------------------- |
-| keyword       | It is using keyword to search image.          |
-| title         | The title of the web site that got the image. |
-| image         | The URL of the got image.                     |
-| search_result | Number of images hit in search.               |
-| start_index   | Number of page hit in search.                 |
+| key           | detail                                          |
+| ------------- | ----------------------------------------------- |
+| keyword       | It is using keyword to search image.            |
+| title         | The title of the web site that got the image.   |
+| image         | The URL of the got image.                       |
+| search_result | Number of images hit in search.                 |
+| start_index   | Number of page on which the image is displayed. |
 
 ### In a command line
 
