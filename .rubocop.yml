@@ -14,6 +14,10 @@ Layout/SpaceInsideBlockBraces:
   Exclude:
     - 'Gemfile'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'gcs_api_gem.gemspec'
+
 Metrics/LineLength:
   Max: 96
 

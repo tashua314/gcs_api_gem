@@ -3,13 +3,21 @@ module GcsApiGem
   class SearchApi
     class << self
       def image(keyword)
-        return { error: 'Please set KEY to environment variable.' } if blank?(ENV['KEY'])
-        return { error: 'Please set CSE_ID to environment variable.' } if blank?(ENV['CSE_ID'])
+        return { error: 'Please set KEY to environment variable.' } if key_is_ng?
+        return { error: 'Please set CSE_ID to environment variable.' } if cse_id_is_ng?
 
         choice(fetch(keyword))
       end
 
       private
+
+      def key_is_ng?
+        blank?(ENV['KEY'])
+      end
+
+      def cse_id_is_ng?
+        blank?(ENV['CSE_ID'])
+      end
 
       def url
         'https://www.googleapis.com/customsearch/v1'
@@ -47,7 +55,7 @@ module GcsApiGem
       end
 
       def formatted_item(res)
-        item = res['items'][rand(10)]
+        item = res['items'][rand(res['items'].count)]
         {
           title: item['title'],
           image: item['link'],
