@@ -2,7 +2,8 @@ module GcsApiGem
   # SearchApi
   class SearchApi
     class << self
-      def image(keyword)
+      # Select one piece randomly from images searched by keyword
+      def random_image(keyword)
         return { error: 'Please set KEY to environment variable.' } if key_is_ng?
         return { error: 'Please set CSE_ID to environment variable.' } if cse_id_is_ng?
 
