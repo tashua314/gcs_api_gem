@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require 'gcs_api_gem'
+require 'optparse'
+require 'pry'
+
+def output(res)
+  return res[:image] if res[:image]
+  return "Error: #{res[:error]}" if res[:error]
+  res
+end
+
+def blank?(obj)
+  return false if obj.class == Numeric
+  obj.nil? || obj.empty?
+end
+
+opt = OptionParser.new
+opt.on('-r', '--random-image', 'Select on piece randomly from images searched by keyword.')
+opt.parse(ARGV)
+
+params = ARGV.getopts('', 'random-image')
+keyword = ARGV[0]
+
+errors = []
+errors.push 'Error: Please set keyword.' if blank?(keyword)
+errors.push 'Error: Please set options.(See --help.)' unless params['random-image']
+
+unless errors.count.zero?
+  errors.each do |error|
+    p error
+  end
+  exit 1
+end
+
+p output(GcsApiGem::SearchApi.random_image(keyword))
+exit 0
