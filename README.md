@@ -59,7 +59,8 @@ Then you get a random image searched by keyword.
 #### Example
 
 ```
-> GcsApiGem::SearchApi.random_image('cat')
+> obj = GcsApiGem::SearchApi.new
+> obj.random_image('cat')
 => {
     :keyword=>"cat",
     :title=>"Cute Cat - Chrome Web Store",
@@ -71,7 +72,7 @@ Then you get a random image searched by keyword.
 
 #### Response
 
-Response of GcsApiGem::SearchApi.random_image is as below:
+Response of GcsApiGem::SearchApi#random_image is as below:
 
 | key           | detail                                          |
 | ------------- | ----------------------------------------------- |
