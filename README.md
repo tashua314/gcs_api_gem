@@ -1,6 +1,6 @@
 # GcsApiGem
 
-This project is a Ruby lib for Google's Custom Search ENgine API (http://www.google.com/cse).
+This project is a Ruby lib for Google's Custom Search Engine API (http://www.google.com/cse).
 This is very easy to use but available functions are restricted.
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gcs_api_gem`. To experiment with that code, run `bin/console` for an interactive prompt.
