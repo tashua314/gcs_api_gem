@@ -85,7 +85,7 @@ Response of GcsApiGem::SearchApi.random_image is as below:
 
 Write in a command line as below:
 
-    $ gcs_api_gem.random_image -r cat
+    $ gcs_api_gem -r cat
 
 ## Contributing
 
