@@ -33,5 +33,6 @@ unless errors.count.zero?
   exit 1
 end
 
-p output(GcsApiGem::SearchApi.random_image(keyword))
+obj = GcsApiGem::SearchApi.new
+p output(obj.random_image(keyword))
 exit 0

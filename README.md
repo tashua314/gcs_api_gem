@@ -50,7 +50,8 @@ Or see [here](http://ryutamaki.hatenablog.com/entry/2014/01/18/171640).
 Write in your program as below:
 
 ```ruby
-GcsApiGem::SearchApu.rondom_image(<keyword>)
+obj.GcsApiGem::SearchApi.new
+obj.random_image(<keyword>)
 ```
 
 Then you get a random image searched by keyword.
@@ -60,9 +61,11 @@ Then you get a random image searched by keyword.
 ```
 > GcsApiGem::SearchApi.random_image('cat')
 => {
+    :keyword=>"cat",
     :title=>"Cute Cat - Chrome Web Store",
     :image=>"https://lh3.googleusercontent.com/FnN1_Jabl5WITJrHYLGv80r-GNSNAPI_nwrrSgHh8fRUh5fsHFMmPFkPOjaX16H5Pi-Fwotg=w640-h400-e365",
-    :search_result=>"320000000"
+    :search_result=>"320000000",
+    :start_index=>2
    }
 ```
 
@@ -72,9 +75,11 @@ Response of GcsApiGem::SearchApi.random_image is as below:
 
 | key           | detail                                        |
 | ------------- | --------------------------------------------- |
+| keyword       | It is using keyword to search image.          |
 | title         | The title of the web site that got the image. |
 | image         | The URL of the got image.                     |
 | search_result | Number of images hit in search.               |
+| start_index   | Number of page hit in search.                 |
 
 ### In a command line
 
